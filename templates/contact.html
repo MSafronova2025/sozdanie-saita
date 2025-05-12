@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учебный Комбинат Транспорта</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style-contact.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="fixed-header">
+    <header class="header">
+      <img src="{{ url_for('static', filename='image/12.png') }}" class="logo" alt="Логотип">
+      <h1>Восточно-Казахстанский областной Учебный комбинат транспорта</h1>
+    </header>
+
+  <div class="subnav">
+    <div class="subnav-inner">
+    <button class="btn" onclick="window.location.href='/'">🏠 Главная</button>
+    <button class="btn" onclick="window.location.href='/'">
+      <i class="fas fa-envelope"></i> Контакты
+    </button>
+  </div>
+</div>
+
+<div class="subject-buttons">
+  <button data-subject="contacti">Контактная информация</button>
+</div>
+
+
+  <h2>Контакты и режим работы</h2>
+  <div class="contact-map-container">
+    <!-- Таблица с контактами -->
+    <table class="contacts-table">
+      <tr>
+        <th>Контакт</th>
+        <th>Информация</th>
+      </tr>
+      <tr>
+        <td>Адрес</td>
+        <td>просп. Нурсултана Назарбаева, 59, г. Усть-Каменогорск</td>
+      </tr>
+      <tr>
+        <td>Режим работы офиса</td>
+        <td>
+          пн-чт: 09:00–18:00, перерыв 13:00–14:00;<br>
+          пт: 09:00–17:00, перерыв 13:00–14:00
+        </td>
+      </tr>
+      <tr>
+        <td>Электронная почта и телефоны</td>
+        <td>
+          Email: <a href="mailto:vkoukt@mail.ru">vkoukt@mail.ru</a><br>
+          Тел.: 8 (7232) 77-73-69, 8 (7232) 77-77-50, 8-778-707-25-45
+        </td>
+      </tr>
+    </table>
+
+    <!-- Карта -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2957.1082849438255!2d82.60567531512149!3d49.97460597941426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42f87e3c3bfc0c27%3A0xfed5201c1a64ec38!2z0YPQuy4g0JDQstGC0L7QvdCwLCDQkdC10LvQuNC10L3QsNGPLCDQmtC40YDQtdC00LXRgdC60LDRjyDQvtCx0LsuLCAwNzAwMDA!5e0!3m2!1sru!2skz!4v1647089821741!5m2!1sru!2skz" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Учебный Комбинат Транспорта. Все права защищены.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script-history.js') }}"></script>
+</body>
+</html>

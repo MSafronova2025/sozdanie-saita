@@ -1,0 +1,336 @@
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  height: 100%;
+  }
+
+  /* Логотип будет расположен сверху слева */
+.logo {
+  position: absolute;   /* Абсолютное позиционирование относительно .header */
+  left: 20px;           /* Отступ от левого края */
+  top: 1px;            /* Отступ от верхнего края */
+  width: 120px;         /* Задайте нужную ширину логотипа */
+  height: auto;
+  }
+     
+  /* Заголовок занимает всю ширину и центрируется */
+  .header h1 {
+  margin: 0;
+  font-size: 20px;      /* Подберите размер по вкусу */
+  line-height: 1.2;
+  }
+  
+body {
+  background: url('/static/image/9.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.header {
+  position: relative;   /* Создаем контекст для абсолютного позиционирования логотипа */
+  text-align: center;   /* Центрируем заголовок */
+  padding: 20px 10;      /* Отступ сверху и снизу */
+}
+
+h1 {
+  text-align: center;
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+.btn {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+}
+
+.book-section {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.book-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subnav {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  background: linear-gradient(to top, rgb(224, 226, 226), 60%, rgb(95, 150, 150));
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.subnav a:hover {
+  color: #460afad6;
+}
+
+.subject-buttons {
+  position: fixed;
+  top: 130px; /* отступ под .fixed-header */
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background: linear-gradient(to top, #b5bdc8 0%, #228ae6 36%, #660eca 100%);
+  color: #fff;
+  z-index: 1000;
+  transition: opacity 0.4s ease, background-color 0.4s ease;
+  opacity: 1;
+ }
+  
+.subject-buttons button {
+  background-color: #c7d9f3;
+  border: none;
+  padding: 10px 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #1b1b1b;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-header h1 {
+  font-size: 28px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.subnav, .subject-buttons {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subnav .btn,
+.subject-buttons button {
+  margin: 2px 10px;
+  cursor: pointer;
+  font-size: 14px;     /* уменьшение текста */
+  padding: 5px 10px;   /* уменьшение отступов */
+  border-radius: 4px;
+  height: 30px;   
+  line-height: 1;
+ }
+
+.subnav .btn {
+  font-size: 14px;
+  padding: 4px 5px;
+}
+
+.search-container {
+  float: right;          /* Позиционируем контейнер справа */
+  text-align: right;     /* Выравниваем содержимое по правому краю */
+  margin: 1px 10px;     /* Отступы: сверху/снизу 10px, слева/справа 20px */
+  width: auto;           /* Ширина по содержимому */
+}
+
+.search-container input[type="text"] {
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Отступ для основного контента */
+main.container {
+  padding-top: 200px; 
+}
+
+.container {
+  text-align: left;
+}
+
+[data-subject="kabineti"] img,
+[data-subject="avtopark"] img,
+[data-subject="prepodavateli"] img,
+[data-subject="gramoti"] img {
+  margin: 10px;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.block {
+  margin: 0;
+  width: 80%;
+}
+
+.school-info {
+  background-image: url('/static/image/1.jpg'); /* Укажите путь к нужному изображению */
+  background-size: cover;      /* Изображение масштабируется, чтобы полностью покрыть блок */
+  background-position: center; /* Центрирование изображения */
+  background-repeat: no-repeat; /* Избегаем повторения изображения */
+  padding: 30px;
+  margin: 10px auto;
+  max-width: 1000px;
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  color: #333;  /* базовый цвет текста */
+}
+
+.school-info h2 {
+  text-align: center;
+  color: #1909fa; /* яркий насыщенный красный для заголовка */
+  margin-bottom: 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.school-info h3 {
+  color: #5e35b1; /* насыщенный фиолетовый для подзаголовков */
+  margin-bottom: 0 !important;
+}
+
+.school-info p {
+  color: #424242; /* немного светлее базового цвета для удобства чтения */
+  margin-bottom: 15px;
+}
+
+.school-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.school-info ul li {
+  position: relative;
+  padding-left: 30px;  /* отступ для галочки */
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.school-info ul li::before {
+  content: "✔ ";
+  color: #43a047; /* яркий зелёный для галочки */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.school-info blockquote {
+  border-left: 4px solid #ffab00; /* яркий оранжевый для линии цитаты */
+  padding-left: 15px;
+  color: #616161;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.school-info cite {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  font-style: normal;
+  color: #00897b;
+}
+
+.school-info .school-final {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 30px;
+  color: #fa0c0c;
+}
+
+/* Блок документов с левым выравниванием и увеличенным отступом между галочкой и текстом */
+.documents-left {
+  text-align: left;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+.documents-left .checklist {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.documents-left .checklist li {
+  position: relative;
+  padding-left: 30px;  /* Отступ для галочки и зазора */
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.documents-left .checklist li::before {
+  content: "✔ ";
+  color: green;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.quote-text {
+  color: #070bfa; /* Цвет цитаты */
+}
+
+blockquote cite.quote-cite {
+  color: #13ca31 !important;
+}
+
+
+blockquote {
+  border-left: 4px solid #da0c0c !important;
+  /* другие стили */
+}
+
+
+[data-subject="gramoti"] ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+[data-subject="gramoti"] ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+[data-subject="gramoti"] ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 600px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}

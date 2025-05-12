@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Учебный Комбинат Транспорта{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style-uslugi.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+      html, body { margin: 0; padding: 0; }
+    </style>
+</head>
+<body>
+
+  <div class="fixed-header">
+    <header class="header">
+      <img src="{{ url_for('static', filename='image/12.png') }}" class="logo" alt="Логотип">
+      <h1 style="text-align:center;">Восточно-Казахстанский областной Учебный комбинат транспорта</h1>
+    </header>
+
+    <div class="subnav">
+      <button class="btn" onclick="window.location.href='/';">🏠 Главная</button>
+      <button class="btn" onclick="window.location.href='/';">📘 Услуги</button>
+      
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Поиск по сайту...">
+        <button onclick="searchContent()">🔍 Найти</button>
+      </div>
+    </div>
+      <div class="subject-buttons">
+        <button data-subject="kategoriya A, B, C1, C, D1, D, CE">Категории A, B, C1, C, D1, D, CE</button>
+      </div>     
+  </div>
+
+  
+  <h2>Стоимость и сроки обучения</h2>
+  <table id="tablepress-1" class="tablepress tablepress-id-1">
+    <thead>
+      <tr class="row-1 odd">
+        <th class="column-1">№</th>
+        <th class="column-2">Категории обучения</th>
+        <th class="column-3">Возраст обучения</th>
+        <th class="column-4">Стаж</th>
+        <th class="column-5">Срок обучения</th>
+        <th class="column-6">Общая стоимость (теория и практическое обучение)</th>
+      </tr>
+    </thead>
+    <tbody class="row-hover">
+      <tr class="row-2 even">
+        <td class="column-1">1</td>
+        <td class="column-2"><strong>«A1, А»</strong></td>
+        <td class="column-3">16 лет обучение, 18 лет получение прав</td>
+        <td class="column-4"></td>
+        <td class="column-5">2 месяца</td>
+        <td class="column-6">65 000 тг.</td>
+      </tr>
+      <tr class="row-3 odd">
+        <td class="column-1">2</td>
+        <td class="column-2"><strong>«В»</strong></td>
+        <td class="column-3">16 лет обучение, 18 лет получение прав</td>
+        <td class="column-4"></td>
+        <td class="column-5">3 месяца</td>
+        <td class="column-6">125 000 тг.</td>
+      </tr>
+      <tr class="row-4 even">
+        <td class="column-1">3</td>
+        <td class="column-2"><strong>«ВС1»</strong></td>
+        <td class="column-3"></td>
+        <td class="column-4"></td>
+        <td class="column-5">4 месяца</td>
+        <td class="column-6">155 000 тг.</td>
+      </tr>
+      <tr class="row-5 odd">
+        <td class="column-1">4</td>
+        <td class="column-2"><strong>с «В» на «С1»</strong></td>
+        <td class="column-3">С 18 лет</td>
+        <td class="column-4"></td>
+        <td class="column-5">2,5 месяца</td>
+        <td class="column-6">75 000 тг.</td>
+      </tr>
+      <tr class="row-6 even">
+        <td class="column-1">5</td>
+        <td class="column-2"><strong>с «С1» на «С»</strong></td>
+        <td class="column-3"></td>
+        <td class="column-4">стаж «С1» должен быть 1 год</td>
+        <td class="column-5">2,5 месяца</td>
+        <td class="column-6">75 000 тг.</td>
+      </tr>
+      <tr class="row-7 odd">
+        <td class="column-1">6</td>
+        <td class="column-2"><strong>«D1»</strong></td>
+        <td class="column-3"></td>
+        <td class="column-4">после получения категории «BC1» и «С» стаж должен быть не менее 3 лет</td>
+        <td class="column-5">2,5 месяца</td>
+        <td class="column-6">75 000 тг.</td>
+      </tr>
+      <tr class="row-8 odd">
+        <td class="column-1">7</td>
+        <td class="column-2"><strong>«D»</strong></td>
+        <td class="column-3">С 25 лет</td>
+        <td class="column-4">после получения категории менее «BC1», «C», «D1» стаж должен быть не менее 3 лет</td>
+        <td class="column-5">2,5 месяца</td>
+        <td class="column-6">90 000 тг.</td>
+      </tr>
+      <tr class="row-9 even">
+        <td class="column-1">8</td>
+        <td class="column-2"><strong>«СE»</strong></td>
+        <td class="column-3">С 20 лет</td>
+        <td class="column-4"></td>
+        <td class="column-5">1 месяц</td>
+        <td class="column-6">60 000 тг.</td>
+      </tr>
+    </tbody>
+  </table>  
+
+  {% block content %}{% endblock %}
+
+  <footer class="footer">
+    <p>&copy; 2025 Учебный Комбинат Транспорта. Все права защищены.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script-history.js') }}"></script>
+
+</body>
+</html>

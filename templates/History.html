@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учебный Комбинат Транспорта</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style-history.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="fixed-header">
+    <header class="header">
+      <img src="{{ url_for('static', filename='image/12.png') }}" class="logo" alt="Логотип">
+      <h1 style="text-align:center;">
+        Восточно-Казахстанский областной Учебный комбинат транспорта
+      </h1>
+    </header>
+
+    <div class="subnav">
+      <button class="btn" onclick="window.location.href='/';">🏠 Главная</button>
+      <button class="btn" onclick="window.location.href='/';">📘 История</button>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Поиск по сайту...">
+        <button onclick="searchContent()">🔍 Найти</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Кнопки секций -->
+  <div class="subject-buttons">
+    <button data-subject="history">История автошколы</button>
+    <button data-subject="kabineti">Кабинеты</button>
+    <button data-subject="avtopark">Парк автошколы</button>
+    <button data-subject="prepodavateli">Преподаватели</button>
+    <button data-subject="gramoti">Грамоты</button>
+  </div>
+
+  <main class="container">
+    <p id="noResultsMessage" style="display:none; text-align:center; color:red; font-size:18px; margin-top:20px;">
+    <section data-subject="history" class="book-section">
+      <h2>История автошколы</h2>
+      <p>Историческая информация автошколы...</p>
+      
+      <div class="school-info">
+        <h2>Учебный комбинат транспорта</h2>
+        <p>
+          <strong>Учебный комбинат транспорта</strong> — это надёжный образовательный центр с богатой историей, работающий более <strong>65 лет</strong>.
+        </p>
+        <p>
+          Наша цель — обучить каждого студента <strong>безопасному, уверенному и осознанному вождению</strong>.
+        </p>
+      
+        <h3>Наши приоритеты:</h3>
+        <div class="documents-left">
+          <ul class="checklist">
+            <li>Повышение качества подготовки водителей</li>
+            <li>Формирование навыков безаварийной езды</li>
+            <li>Ответственное отношение к дорожной безопасности</li>
+          </ul>
+        </div>
+      
+        <h3>Миссия</h3>
+        <p>
+          Наша миссия — <em>воспитать уверенных и ответственных водителей</em>, готовых к любым дорожным ситуациям.
+        </p>
+        
+        <h3>Материально-техническая база</h3>
+        <p>
+          Мы соответствуем всем современным требованиям. В распоряжении студентов:
+        </p>
+        <div class="documents-left">
+          <ul class="checklist">
+            <li>7 оборудованных теоретических кабинетов</li>
+            <li>Лабораторно-практический кабинет (ЛПЗ)</li>
+            <li>Автодром для начального обучения</li>
+          </ul>
+        </div>
+        
+        <h3>Преподаватели</h3>
+        <p>
+          Наши педагоги — специалисты <strong>высшей категории</strong> с опытом работы <strong>более 20 лет</strong>.
+        </p>
+        <blockquote>
+          <span class="quote-text">
+            «Мастерство у учащихся может формировать только тот, кто сам этим мастерством владеет в совершенстве.»
+          </span><br>
+          <cite class="quote-cite">— В.А. Сухомлинский</cite>
+        </blockquote>
+             
+        <h3>Методика обучения</h3>
+        <p>
+          Процесс построен на сочетании теории и практики с индивидуальным подходом. Курсанты:
+        </p>
+        <div class="documents-left">
+          <ul class="checklist">
+            <li>Развивают уверенность и инициативность</li>
+            <li>Формируют любовь к автомобилям</li>
+            <li>Учатся ответственности за себя и пассажиров</li>
+            <li>Уважают других участников движения</li>
+          </ul>
+        </div>
+        
+        <h3>Документы после обучения</h3>
+        <p>После окончания курсов выпускники получают:</p>
+        <div class="documents-left">
+          <ul class="checklist">
+            <li>Сертификат об окончании</li>
+            <li>Водительскую карточку</li>
+            <li>Медицинскую справку</li>
+          </ul>
+        </div>        
+        <p>
+          Эти документы необходимы для получения водительского удостоверения государственного образца.
+        </p>
+        
+        <h3>Наши результаты</h3>
+        <div class="documents-left">
+          <ul class="checklist">
+            <li><strong>98%</strong> курсантов успешно проходят внутреннюю аттестацию</li>
+            <li><strong>95%</strong> сдают экзамен в ГИБДД с первого раза</li>
+            <li><strong>95%</strong> рекомендуют нас как лучшую автошколу Усть-Каменогорска</li>
+          </ul>
+        </div>
+        
+        <h3>Почему выбирают нас</h3>
+        <p>
+          <strong>Учебный комбинат транспорта</strong> — это:
+        </p>
+        <div class="documents-left">
+          <ul class="checklist">
+            <li>Опытные преподаватели</li>
+            <li>Современная база</li>
+            <li>Индивидуальный подход</li>
+            <li>Безупречная репутация</li>
+          </ul>
+        </div>
+        
+        <p class="school-final">
+          Мы — ваш надёжный путь к профессиональному вождению!
+        </p>
+       </div>
+    </section>
+      
+    <section data-subject="kabineti" class="book-section">
+      <h2>Кабинеты</h2>
+      <div class="kabineti-gallery">
+        <img src="{{ url_for('static', filename='image/Klass/Klass_1.jpg') }}" width="540" height="400" alt="">
+        <img src="{{ url_for('static', filename='image/Klass/Klass_2.jpg') }}" width="540" height="400" alt="">
+        <img src="{{ url_for('static', filename='image/Klass/Klass_3.jpg') }}" width="540" height="400" alt="">
+        <img src="{{ url_for('static', filename='image/Klass/Klass_4.jpg') }}" width="500" height="400" alt="">
+        <img src="{{ url_for('static', filename='image/Klass/Uchebnoe_oborudovanie.jpg') }}" width="500" height="400" alt="">
+        <img src="{{ url_for('static', filename='image/Klass/Ustroistvo_avto.jpg') }}" width="300" height="400" alt="">
+        <img src="{{ url_for('static', filename='image/Klass/Kabineti_PDD.jpg') }}" width="300" height="400" alt="">
+      </div>
+    </section>
+    
+      <section data-subject="avtopark" class="book-section">
+          <h2>Парк автошколы</h2>
+          <img src="/static/image/Autopark/1_page.jpg" width="500" height="400" />
+          <img src="/static/image/Autopark/2_page.jpg" width="500" height="400" />
+          <img src="/static/image/Autopark/3_page.jpg" width="500" height="400" />
+          <img src="/static/image/Autopark/4_page.jpg" width="500" height="400" />
+          <img src="/static/image/Autopark/5_page.jpg" width="500" height="400" />
+      </section>
+    
+        <section data-subject="prepodavateli" class="book-section">
+          <h2>Преподаватели</h2>
+          <p>Фотографии  преподавателей...</p>
+          <img src="/static/image/Foto/Obhee.jpg" width="500" height="400" />
+          <img src="/static/image/Foto/Afanasev_1.jpg" width="300" height="400" />
+          <img src="/static/image/Foto/Afanasev.jpg" width="300" height="400" />
+          <img src="/static/image/Foto/Schulgin.jpg" width="300" height="400" />
+          <img src="/static/image/Foto/Sergeev.jpg" width="300" height="400" />
+          <img src="/static/image/Foto/Sinelnikov.jpg" width="300" height="400" />
+        </section>
+    
+        <section data-subject="gramoti" class="book-section">
+          <h2>Грамоты</h2>
+           <h3>Законодательная база</h3>
+          <p style="font-weight: bold;  font-size: 20px;">
+            Деятельность автошколы регламентируется:
+          </p>
+          <ul>
+            <li>Гражданским кодексом Республики Казахстан</li>
+            <li>Нормативными актами Министерства транспорта и Министерства образования</li>
+            <li>Постановлениями Правительства о лицензировании</li>
+          </ul>    
+          <p style="font-weight: bold; color: #3907f1; font-size: 20px;">
+            Награды и грамоты, полученные автошколой...
+          </p>
+          
+          <img src="/static/image/Gramoti/blagodarstvennoe_pismo.jpg" width="600" height="500" />
+          <img src="/static/image/Gramoti/gramota_1.jpg" width="400" height="500" />
+          <img src="/static/image/Gramoti/gramota_2.jpg" width="600" height="500" />
+          <img src="/static/image/Gramoti/gramota_3.jpg" width="400" height="500" />
+          <img src="/static/image/Gramoti/licenziya.jpg" width="400" height="500" />
+          <img src="/static/image/Gramoti/svidetelstvo.jpg" width="400" height="500" />
+        </section>
+   </main>
+    
+    
+      <footer class="footer">
+        <p>&copy; 2025 Учебный Комбинат Транспорта. Все права защищены.</p>
+      </footer>
+         
+    <!-- Подключение внешнего меню -->
+   
+    <script src="{{ url_for('static', filename='js/script-history.js') }}"></script>
+   
+</body>
+</html>
